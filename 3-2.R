@@ -1,4 +1,4 @@
-# 第四章第2题
+# 第三章第2题
 data <- read.csv("ch2-4.csv", encoding = "UTF-8")
 print(data)
 
