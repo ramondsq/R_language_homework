@@ -30,7 +30,7 @@ print(retval)
 print("筛选数学和统计都60以上的")
 retval <- subset(data, maths > 60 & stat > 60)
 print(retval)
-#(5)锟斤拷锟斤拷
+#(5)分组
 print("对数学成绩分组")
 data$maths_cut = cut(data$maths, breaks = c(0,60,100))
 head(data)
