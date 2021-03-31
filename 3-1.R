@@ -1,7 +1,7 @@
 
 data <- read.csv("ch2-3.csv", encoding = "UTF-8")
 
-print(data)
+head(data)
 #(1)改名
 names(data)[1] <- "number"
 names(data)[2] <- "gender"
@@ -19,17 +19,17 @@ data[order(data$stat),]
 #(3)筛选
 print("显示男性成绩")
 male <- subset(data, gender == "M")
-print(male)
+head(male)
 print("显示女性成绩")
 female <- subset(data, gender == "F")
-print(female)
+head(female)
 #(4)筛选2
 print("筛选数学80分以上，统计90以上的")
 retval <- subset(data, maths > 80 & stat > 90)
-print(retval)
+head(retval)
 print("筛选数学和统计都60以上的")
 retval <- subset(data, maths > 60 & stat > 60)
-print(retval)
+head(retval)
 #(5)分组
 print("对数学成绩分组")
 data$maths_cut = cut(data$maths, breaks = c(0,60,100))
